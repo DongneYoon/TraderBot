@@ -12,9 +12,11 @@ namespace TraderBot
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
+            this.axKHOpenAPI1.OnReceiveTrData += new AxKHOpenAPILib._DKHOpenAPIEvents_OnReceiveTrDataEventHandler(this.OnReceiveTrDataPlus);
         }
 
         private void btn_login_Click(object sender, EventArgs e)
@@ -56,6 +58,32 @@ namespace TraderBot
         private void btn_get_Click(object sender, EventArgs e)
         {
             UpdateInformation();
+        }
+
+        private void btn_getInfo_Click(object sender, EventArgs e)
+        {
+            axKHOpenAPI1.SetInputValue("종목코드", textBox_code.Text.ToString());
+
+            int nRet = axKHOpenAPI1.CommRqData("주식기본정보", "OPT10001", 0, "0101");
+        }
+
+        private void OnReceiveTrDataPlus(object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnReceiveTrDataEvent e)
+        {
+            if(e.sRQName == "주식기본정보")
+            {
+                text_name.Text += axKHOpenAPI1.CommGetData(e.sTrCode,"",e.sRQName, 0, "종목명").ToString().TrimStart(' ');
+                text_changeratio.Text = axKHOpenAPI1.CommGetData(e.sTrCode, "", e.sRQName, 0, "등락율").ToString().TrimStart(' ');
+                text_traderatio.Text = axKHOpenAPI1.CommGetData(e.sTrCode, "", e.sRQName, 0, "거래량").ToString().TrimStart(' ');
+                text_value.Text = axKHOpenAPI1.CommGetData(e.sTrCode, "", e.sRQName, 0, "시가").ToString().TrimStart(' ');
+                text_high.Text = axKHOpenAPI1.CommGetData(e.sTrCode, "", e.sRQName, 0, "고가").ToString().TrimStart(' ');
+                text_low.Text = axKHOpenAPI1.CommGetData(e.sTrCode, "", e.sRQName, 0, "저가").ToString().TrimStart(' ');
+
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

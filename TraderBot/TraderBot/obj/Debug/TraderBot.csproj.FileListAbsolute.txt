@@ -3,7 +3,6 @@ C:\Projects\TraderBot\TraderBot\TraderBot\bin\Debug\TraderBot.exe
 C:\Projects\TraderBot\TraderBot\TraderBot\bin\Debug\TraderBot.pdb
 C:\Projects\TraderBot\TraderBot\TraderBot\bin\Debug\Interop.KHOpenAPILib.dll
 C:\Projects\TraderBot\TraderBot\TraderBot\bin\Debug\AxInterop.KHOpenAPILib.dll
-C:\Projects\TraderBot\TraderBot\TraderBot\obj\Debug\TraderBot.csprojResolveAssemblyReference.cache
 C:\Projects\TraderBot\TraderBot\TraderBot\obj\Debug\Interop.KHOpenAPILib.dll
 C:\Projects\TraderBot\TraderBot\TraderBot\obj\Debug\AxInterop.KHOpenAPILib.dll
 C:\Projects\TraderBot\TraderBot\TraderBot\obj\Debug\TraderBot.csproj.ResolveComReference.cache
@@ -13,3 +12,4 @@ C:\Projects\TraderBot\TraderBot\TraderBot\obj\Debug\TraderBot.csproj.GenerateRes
 C:\Projects\TraderBot\TraderBot\TraderBot\obj\Debug\TraderBot.csproj.CoreCompileInputs.cache
 C:\Projects\TraderBot\TraderBot\TraderBot\obj\Debug\TraderBot.exe
 C:\Projects\TraderBot\TraderBot\TraderBot\obj\Debug\TraderBot.pdb
+C:\Projects\TraderBot\TraderBot\TraderBot\obj\Debug\TraderBot.csprojResolveAssemblyReference.cache
